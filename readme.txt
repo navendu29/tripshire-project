@@ -19,7 +19,7 @@ go to the directory where nn.js is saved by using command prompt
 then type node nn.js
 this will run the server
 
-now from the folder open mainform.html
+now from the folder open formMain.html
 type the email to which magically generated link is to be sent
 press submit button
 the link is sent
