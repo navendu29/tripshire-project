@@ -184,7 +184,7 @@ app.get("/taketest/:userlink", function(req, res){
 
 	
 	  
-	connection.query('SELECT * FROM question', function(err, results) {
+	connection.query('SELECT * FROM questions', function(err, results) {
 		   
 		   
 		   
@@ -312,7 +312,7 @@ var url='http://127.0.0.1:8081/taketest/'+req.params.userlink;
 
 	
 	 
-	connection.query('SELECT * FROM question where ques='+ mysql.escape(s1), function(err, results) {
+	connection.query('SELECT * FROM questions where ques='+ mysql.escape(s1), function(err, results) {
 
     console.log(results[0]);
 console.log("ssssss");
@@ -335,7 +335,7 @@ console.log(mar);
 	}			
 	 
 	});
-	connection.query('SELECT * FROM question where ques='+ mysql.escape(s2), function(err, results) {
+	connection.query('SELECT * FROM questions where ques='+ mysql.escape(s2), function(err, results) {
 		   
 	
 	
@@ -352,7 +352,7 @@ console.log(mar);
 	
 	
 	});
-	connection.query('SELECT * FROM question where ques='+ mysql.escape(s3), function(err, results) {
+	connection.query('SELECT * FROM questions where ques='+ mysql.escape(s3), function(err, results) {
 		   
 	 
 	

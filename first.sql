@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2017 at 08:57 AM
+-- Generation Time: Nov 29, 2017 at 11:27 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -29,64 +29,25 @@ SET time_zone = "+00:00";
 CREATE TABLE `details` (
   `email` varchar(1000) NOT NULL,
   `links` varchar(1000) NOT NULL,
-  `marks` varchar(1000) NOT NULL,
-  `teststatus` varchar(1000) NOT NULL
+  `teststatus` varchar(1000) NOT NULL,
+  `marks` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `details`
+--
+
+INSERT INTO `details` (`email`, `links`, `teststatus`, `marks`) VALUES
+('navendugupta29@gmail.com', 'http://127.0.0.1:8081/taketest/388ae127-9320-4edc-be5b-526bfb44a726', '1', '2');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `emails`
+-- Table structure for table `questions`
 --
 
-CREATE TABLE `emails` (
-  `email` varchar(200) NOT NULL,
-  `link` varchar(1000) NOT NULL,
-  `testStatus` tinyint(1) NOT NULL,
-  `marks` int(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `emails`
---
-
-INSERT INTO `emails` (`email`, `link`, `testStatus`, `marks`) VALUES
-('navendugupta29@gmail.com', 'hellmrnavenduthis isgud', 0, 0),
-('navendugupta29@gmail.com', 'hellmrnavenduthis isgud', 0, 0),
-('hello', 'isthatfine', 0, 0),
-('hello', 'isthatfine', 0, 0),
-('akshay', 'hello', 0, 0),
-('akshay', 'hello', 0, 0),
-('email_id', 'hello', 0, 0),
-('email_id', 'hello', 0, 0),
-('email_id', 'hello', 0, 0),
-('email_id', 'hello', 0, 0),
-('email_id', 'hello', 0, 0),
-('jeevan', '16', 82, 2),
-('coolnav10', '16', 82, 2),
-('saakshi', '16', 82, 2),
-('kunal', '6d519b89-7176-4538-b791-18a4df3eb478', 82, 2),
-('abhi', '5c6d8017-7342-48a1-a312-78c65d261111', 82, 2),
-('saakshi@gmail.com', 'a09d0c16-f466-46f0-99cd-6caee8ef1769', 82, 2),
-('lklhk', 'c152877d-6074-418e-a548-28b032466776', 82, 2),
-('lklhk', '62a88d74-ac0d-413a-b0b9-8a5423b3d589', 82, 2),
-('querudvckdsk', '37edb9b1-1ae0-41bb-ac69-1c3126c6b6fe', 82, 2),
-('querudvckdsk', 'a8811095-a91b-4d9b-90e9-79d39b743287', 82, 2),
-('querudvckdsk', '80739220-91a4-47f2-84da-57cab5554f37', 82, 2),
-('querudvckdsk', '1ad2606a-56ae-4b03-9018-01b32f11777f', 82, 2),
-('opverma', '2137d976-9e15-46e2-a3a6-17f89cb40529', 82, 2),
-('saakshi.gupta2910@gmail.com', '5385ae42-75f0-47b1-b0a5-109b298e1c87', 82, 2),
-('saakshi.gupta2910@gmail.com', 'a3959d58-8cb5-4316-b6e3-a9d848fd910a', 82, 2),
-('navendugupta32@gmail.com', '80f0f486-11af-4584-91aa-9cb562b4901e', 82, 2);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `question`
---
-
-CREATE TABLE `question` (
-  `id` int(100) NOT NULL,
+CREATE TABLE `questions` (
+  `id` varchar(1000) NOT NULL,
   `ques` varchar(1000) NOT NULL,
   `op1` varchar(1000) NOT NULL,
   `op2` varchar(1000) NOT NULL,
@@ -95,37 +56,15 @@ CREATE TABLE `question` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `question`
+-- Dumping data for table `questions`
 --
 
-INSERT INTO `question` (`id`, `ques`, `op1`, `op2`, `op3`, `ans`) VALUES
-(1, 'who invented telephone', 'alexandar graham bell', 'bill gates', 'newton', 'hitler'),
-(1, 'who invented telephone', 'alexandar graham bell', 'bill gates', 'newton', 'hitler'),
-(2, 'HIghest paid athlete in 2015', 'ronaldo', 'Floyd Mayweather Jr.', 'messi', 'Floyd Mayweather Jr.'),
-(2, 'HIghest paid athlete in 2015', 'ronaldo', 'Floyd Mayweather Jr.', 'messi', 'Floyd Mayweather Jr.'),
-(4, 'who is the national animal', 'peacock', 'lion', 'tiger', 'tiger'),
-(4, 'who is the national animal', 'peacock', 'lion', 'tiger', 'tiger');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `student`
---
-
-CREATE TABLE `student` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `student`
---
-
-INSERT INTO `student` (`id`, `name`, `password`) VALUES
-(1, 'navendu', 'jdsvbicbiadkb'),
-(1, 'navendu', 'jdsvbicbiadkb'),
-(22, 'vcjvkcbalbl', 'kvivikbkh');
+INSERT INTO `questions` (`id`, `ques`, `op1`, `op2`, `op3`, `ans`) VALUES
+('1', 'natinal animal', 'tiger', 'peacock', 'elephant', 'tiger'),
+('2', 'biggest animal', 'blue whale', 'elephant', 'giraffe', 'blue whale'),
+('3', 'pm of india', 'arvind kejriwal', 'rahul gandhi', 'narendra modi', 'narendra modi'),
+('6', 'cm of delhi', 'narendra modi', 'rahul gandhi', 'arvind kejriwal', 'arvind kejriwal'),
+('4', 'capital', 'delhi', 'bangalore', 'chennai', 'delhi');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
